@@ -8,14 +8,14 @@ const Home = () => {
 	return (
 		<div className="container-fluid">
 			<Navbar />
-			<div className="container row row-cols-4 m-auto p-2">
+			<div className="container row m-auto p-1">
 				<Jumbotron />
 					<Card />
 					<Card />
 					<Card />
 					<Card />
-				</div>
 			</div>
+		</div>
 	);
 };
 
