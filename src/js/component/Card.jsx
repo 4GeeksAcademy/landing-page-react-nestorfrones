@@ -1,21 +1,32 @@
 import React from "react";
+import PropType from "prop-types";
 
-
-const Card = () => {
+const Card = (props) => {
     return (
-        <div className="card col m-1 mt-5">
-            <img src="https://picsum.photos/id/1/500/325" className="card-img-top mt-1" alt="..."/>
-                <div className="card-body">
-                    <h4 className="card-title">Card title</h4>
-                    <p className="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque a laudantium sapiente, fugit temporibus ex ab dolorem animi quasi excepturi unde iure non vitae! Quod odio reprehenderit minima consectetur labore!.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
-                </div>
+        <div className="card col-lg-3 col-sm-12 mt-5 text-center">
+            <img src={props.imageUrl} className="card-img-top mt-1" alt="..." />
+            <div className="card-body">
+                <h4 className="card-title">{props.title}</h4>
+                <p className="card-text">{props.description}</p>
+                <a href={props.buttonUrl} className="btn btn-primary mt-auto">{props.buttonLabel}</a>
+            </div>
         </div>
     );
 
 };
 
+Card.PropType = {
+    title: PropType.string,
+    imageUrl: PropType.string,
+    description: PropType.string,
+    buttonUrl: PropType.string,
+    buttonLabel: PropType.string,
+
+};
+
 export default Card
+
+
 
 
 
