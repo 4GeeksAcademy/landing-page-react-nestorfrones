@@ -1,6 +1,17 @@
 import React from "react";
 import PropType from "prop-types";
 
+
+
+
+
+
+
+
+
+
+
+
 const Card = (props) => {
     return (
         <div className="card col-lg-3 col-sm-12 mt-5 text-center">
